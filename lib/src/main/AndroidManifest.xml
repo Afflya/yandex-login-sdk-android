@@ -1,6 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.yandex.authsdk">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <queries>
         <intent>
@@ -52,6 +51,11 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="yx${YANDEX_CLIENT_ID}.${YANDEX_OAUTH_HOST}"
+                    android:path="/auth/finish"
+                    android:scheme="http" />
 
                 <data
                     android:host="yx${YANDEX_CLIENT_ID}.${YANDEX_OAUTH_HOST}"
